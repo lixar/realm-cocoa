@@ -53,6 +53,8 @@ public enum Error: ErrorType {
             return RLMError.FileNotFound
         case .IncompatibleLockFile:
             return RLMError.IncompatibleLockFile
+        case .FileFormatUpgradeRequired:
+            return RLMError.FileFormatUpgradeRequired
         }
     }
 
@@ -82,6 +84,10 @@ public enum Error: ErrorType {
     /// Error thrown by Realm if the database file is currently open in another process which
     /// cannot share with the current process due to an architecture mismatch.
     case IncompatibleLockFile
+
+    /// Returned by RLMRealm if a file format upgrade is required to open the file,
+    /// but upgradeswere explicilty disabled.
+    case FileFormatUpgradeRequired
 }
 
 // MARK: Equatable
