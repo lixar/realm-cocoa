@@ -348,25 +348,25 @@ public class ObjectUtil: NSObject {
             let mirror = Mirror(reflecting: prop.value)
             let type = mirror.subjectType
             if type is Optional<String>.Type || type is Optional<NSString>.Type {
-                properties[name] = Int(PropertyType.String.rawValue)
+                properties[name] = Int(RealmSwiftPropertyType.String.rawValue)
             } else if type is Optional<NSDate>.Type {
-                properties[name] = Int(PropertyType.Date.rawValue)
+                properties[name] = Int(RealmSwiftPropertyType.Date.rawValue)
             } else if type is Optional<NSData>.Type {
-                properties[name] = Int(PropertyType.Data.rawValue)
+                properties[name] = Int(RealmSwiftPropertyType.Data.rawValue)
             } else if type is Optional<Object>.Type {
-                properties[name] = Int(PropertyType.Object.rawValue)
+                properties[name] = Int(RealmSwiftPropertyType.Object.rawValue)
             } else if type is RealmOptional<Int>.Type ||
                       type is RealmOptional<Int8>.Type ||
                       type is RealmOptional<Int16>.Type ||
                       type is RealmOptional<Int32>.Type ||
                       type is RealmOptional<Int64>.Type {
-                properties[name] = Int(PropertyType.Int.rawValue)
+                properties[name] = Int(RealmSwiftPropertyType.Int.rawValue)
             } else if type is RealmOptional<Float>.Type {
-                properties[name] = Int(PropertyType.Float.rawValue)
+                properties[name] = Int(RealmSwiftPropertyType.Float.rawValue)
             } else if type is RealmOptional<Double>.Type {
-                properties[name] = Int(PropertyType.Double.rawValue)
+                properties[name] = Int(RealmSwiftPropertyType.Double.rawValue)
             } else if type is RealmOptional<Bool>.Type {
-                properties[name] = Int(PropertyType.Bool.rawValue)
+                properties[name] = Int(RealmSwiftPropertyType.Bool.rawValue)
             } else if prop.value as? RLMOptionalBase != nil {
                 throwRealmException("'\(type)' is not a a valid RealmOptional type.")
             } else if mirror.displayStyle == .Optional {

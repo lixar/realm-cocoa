@@ -37,7 +37,7 @@ public final class Property: CustomStringConvertible {
     public var name: String { return rlmProperty.name }
 
     /// Property type.
-    public var type: PropertyType { return rlmProperty.type }
+    public var type: RealmSwiftPropertyType { return rlmProperty.type }
 
     /// Whether this property is indexed.
     public var indexed: Bool { return rlmProperty.indexed }

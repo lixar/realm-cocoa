@@ -47,7 +47,7 @@ See [Realm Models](http://realm.io/docs/swift/latest/#models).
 * Object
 * Array
 */
-public typealias PropertyType = RLMPropertyType
+public typealias RealmSwiftPropertyType = RLMPropertyType
 
 /// An opaque token used to unregister notification blocks from Realms.
 public typealias NotificationToken = RLMNotificationToken
